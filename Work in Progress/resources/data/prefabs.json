@@ -1,0 +1,9 @@
+{
+  "CONFIG": {
+    "HAS_RUN": false,
+    "NAME": null,
+    "LOCATION": null,
+    "MAX_TEMP": 75,
+    "MIN_TEMP": 65
+  }
+}
