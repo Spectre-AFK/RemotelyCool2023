@@ -28,7 +28,6 @@ def get_name_and_location(prefabs):
 
     if confirm == "y":
         print("Information confirmed. Thank you!")
-        prefabs["CONFIG"]["HAS_RUN"] = True
         prefabs["CONFIG"]["NAME"] = name
         prefabs["CONFIG"]["LOCATION"] = location
         save_prefabs(prefabs)

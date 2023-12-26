@@ -77,6 +77,7 @@ class Device:
             ws["C3"].value = "Temperature"
             ws["E3"].value = "Notes"
             ws["G3"].value = "Date"
+            prefabs["CONFIG"]["HAS_RUN"] = True
             print("First Time Setup Complete.")
 
         # Getting real data
