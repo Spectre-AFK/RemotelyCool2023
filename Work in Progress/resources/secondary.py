@@ -1,3 +1,6 @@
+"""
+By: Aaron J. | Contains the functions open_onedrive, save_prefabs, get_prefabs, get_time and Device class.
+"""
 from openpyxl import load_workbook
 from resources.temperature import Temperature_Probe
 from time import sleep

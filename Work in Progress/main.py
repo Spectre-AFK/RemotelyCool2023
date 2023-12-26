@@ -1,5 +1,5 @@
 """
-By: Aaron Jauregui | Programs main file, handles first launch, and autonomous use.
+By: Aaron J. | Programs main file, handles first launch, and autonomous use.
 """
 from resources import Device, open_onedrive, get_prefabs, save_prefabs
 from time import sleep

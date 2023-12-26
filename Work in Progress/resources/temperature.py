@@ -1,7 +1,8 @@
+"""
+By: Aaron J. | Responsible for returning temp_f, and temp_c.
+"""
 import os
 from time import sleep
-
-device_names = []
 
 def read(device_name):
     location = f"/sys/bus/w1/devices/{device_name}/w1_slave"
@@ -15,7 +16,6 @@ def read(device_name):
     return celsius, fahrenheit
 
 def temperature_read(device):
-    device_serial = device
     result = read(device)
     if result is not None:
         temp_f = result[1]
@@ -28,7 +28,6 @@ def sensor():
     for devices in os.listdir("/sys/bus/w1/devices"):
         if devices != "w1_bus_master1":
             device = devices
-            device_names.append(devices)
     return device
 
 def main():
