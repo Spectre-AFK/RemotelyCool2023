@@ -16,6 +16,7 @@ def get_name_and_location(prefabs):
     name = input("Enter a Device Name: ")
     location = input(f"Enter the desired location of {name}: ")
 
+    print(TXT_DIV * 30)
     print("Confirm Your Info!")
     print("Name: ", name)
     print("Location: ", location)
@@ -42,6 +43,9 @@ def main():
     prefabs = get_prefabs()
     if prefabs["CONFIG"]["HAS_RUN"] is not True:
         name, location = get_name_and_location(prefabs)
+    else:
+        name = prefabs["CONFIG"]["NAME"]
+        location = prefabs["CONFIG"]["LOCATION"]
     print(TXT_DIV * 30)
 
     onedrive.start()
