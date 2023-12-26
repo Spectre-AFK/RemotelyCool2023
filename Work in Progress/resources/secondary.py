@@ -88,8 +88,6 @@ class Device:
         previous_temp_f = temp_f
         differential = 3  # Amount of change before temp alert
         warn_before = 5  # Amount before max or min temp alert
-        if temp_f > previous_temp_f + differential or temp_f < previous_temp_f - differential:
-            note = "SHARP CHANGE"
         if temp_f > prefabs["CONFIG"]["MAX_TEMP"]:
             note = "TEMP TOO HIGH"
         elif temp_f < prefabs["CONFIG"]["MIN_TEMP"]:
@@ -98,6 +96,8 @@ class Device:
             note = "SLIGHTLY HIGH"
         elif temp_f < prefabs["CONFIG"]["MIN_TEMP"] + warn_before:
             note = "SLIGHTLY LOW"
+        if temp_f > previous_temp_f + differential or temp_f < previous_temp_f - differential:
+            note = "SHARP CHANGE"
 
         ws.insert_rows(4)
         ws["A4"].value = get_time()
