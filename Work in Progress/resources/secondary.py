@@ -1,8 +1,8 @@
-from openpyxl import load_workbook, Workbook
+from openpyxl import load_workbook
 from resources.temperature import Temperature_Probe
-import threading, datetime, json
 from time import sleep
-
+import datetime
+import json
 
 def open_onedrive(type_run):
     print("Starting OneDrive...")

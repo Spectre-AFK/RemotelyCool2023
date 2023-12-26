@@ -16,9 +16,10 @@ def read(device_name):
 
 def temperature_read(device):
     device_serial = device
-    if read(device) is not None:
-        temp_f = read(device)[1]
-        temp_c = read(device)[0]
+    result = read(device)
+    if result is not None:
+        temp_f = result[1]
+        temp_c = result[0]
         return temp_f, temp_c
     else:
         print("Error: No Device Found.")
