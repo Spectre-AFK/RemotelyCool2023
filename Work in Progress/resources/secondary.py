@@ -60,7 +60,7 @@ class Device:
         prefabs = get_prefabs()
 
         sleep(10)  # Waiting for OneDrive
-        device_location = "/home/pi/Desktop/onedrive/My_Temperatures/ONSITE/Temperature_Log.xlsx"
+        device_location = "/home/pi/Desktop/onedrive/My_Temperatures/SITE-1/Temperature_Log.xlsx"
         wb = load_workbook(device_location)
         ws = wb.active
         probe = Temperature_Probe("Default-Name", 1)
